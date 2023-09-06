@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mapExample</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style-slider.css" />
+
+    <style>
+        .sticky {
+            position: -webkit-sticky;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="sticky navbar-light bg-light"
+        style="padding-top: 20px; background-color: white !important; z-index: 2000;height: 90px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: black;">Bano IT Tech</a>
+            <button class="btn my-btn my-sm-0 item-center" style="
+         color: white !important;
+         background-color: black;
+         margin-left: 380px;
+       ">
+                MAP
+            </button>
+            <button class="btn my-btn my-sm-0" style="margin-left: 0px">
+                PROJECTS
+            </button>
+            <button class="btn my-btn my-sm-0" style="margin-left: 0px">
+                FOREST MAKERS
+            </button>
+            <button class="btn my-btn-s btn-lg" onclick="location.href='support.html';">
+                SUPPORT
+            </button>
+        </div>
+    </nav>
+    <!-- nabar end -->
+
+    <div class="start">
+        <!-- map start -->
+        <div id="map-overlay">
+            <select id="filter-select" class="form-control" onchange="listItem();">
+                <option>Filter</option>
+                <option value="1">Pakistan</option>
+                <option value="2">UK</option>
+                <option value="3">Canada</option>
+                <option value="4">Dinagat Islands</option>
+            </select>
+        </div>
+        <div id="map">
+            <main class="grid-item main">
+                <!-- style="transform: translate3d(-12810px, 0px, 0px); transition-duration: 0ms;" -->
+                <div class="items">
+                    <div class="items-0">
+                        <div class="item item-start item-move" id="clickedItem1" style="margin-top: 450px;"
+                            onclick="handleClick(this, 53.4084, 2.9916)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/UK.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Liverpool, UK
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start item-move" id="clickedItem2" style="margin-top: 450px;"
+                            onclick="handleClick(this, 33.6844, 73.0479)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/pak.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Islamabad, Pakistan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem3" style="margin-top: 450px;"
+                            onclick="handleClick(this, 28.644800, 77.216721)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/india.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        New Delhi, India
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem4" style="margin-top: 450px;"
+                            onclick="handleClick(this, 39.916668, 116.383331)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/china.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Beijing, China
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem5" style="margin-top: 450px;"
+                            onclick="handleClick(this, -6.200000, 106.816666)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/indonesia.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Jakarta, Indonesia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem6" style="margin-top: 450px;"
+                            onclick="handleClick(this, 23.810331,90.412521)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/bangaldesh.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Dhaka, Bangladesh
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem7" style="margin-top: 450px;"
+                            onclick="handleClick(this, 35.652832, 139.839478)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/japan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Tokyo, Japan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem8" style="margin-top: 450px;"
+                            onclick="handleClick(this, 35.715298, 51.404343)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/iran.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Tehran, Iran
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem9" style="margin-top: 450px;"
+                            onclick="handleClick(this, 39.925533, 32.866287)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/turkey.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Ankara, Turkey
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem10" style="margin-top: 450px;"
+                            onclick="handleClick(this, 13.736717,100.523186)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/thailand.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Bangkok, Thailand
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem11" style="margin-top: 450px;"
+                            onclick="handleClick(this, 14.5995, 120.9842)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Philippines.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Manila, Philippines
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem12" style="margin-top: 450px;"
+                            onclick="handleClick(this, 21.0285, 105.8542)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Vietnam.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Hanoi, Vietnam
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem13" style="margin-top: 450px;"
+                            onclick="handleClick(this, 19.7633, 96.0785)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Myanmar.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Naypyidaw, Myanmar
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem14" style="margin-top: 450px;"
+                            onclick="handleClick(this, 37.5665, 126.9780)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/SouthKorea.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Seoul, South Korea
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem15" style="margin-top: 450px;"
+                            onclick="handleClick(this, 33.3152, 44.3661)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Iraq.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Baghdad, Iraq
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem16" style="margin-top: 450px;"
+                            onclick="handleClick(this, 34.5553, 69.2075)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Afghanistan.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Kabul, Afghanistan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem17" style="margin-top: 450px;"
+                            onclick="handleClick(this, 24.7136, 46.6753)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/SaudiArabia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Riyadh, Saudi Arabia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem18" style="margin-top: 450px;"
+                            onclick="handleClick(this, 41.2995, 69.2401)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Uzbekistan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Tashkent, Uzbekistan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem19" style="margin-top: 450px;"
+                            onclick="handleClick(this, 15.3694, 44.1910)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Yemen.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Sana'a, Yemen
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem20" style="margin-top: 450px;"
+                            onclick="handleClick(this, 3.1390, 101.6869)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Malaysia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Kuala Lumpur, Malaysia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem21" style="margin-top: 450px;"
+                            onclick="handleClick(this, 27.7172, 85.3240)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Nepal.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Kathmandu, Nepal
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem22" style="margin-top: 450px;"
+                            onclick="handleClick(this, 39.0392, 125.7625)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/NorthKorea.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Pyongyang, North Korea
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem23" style="margin-top: 450px;"
+                            onclick="handleClick(this, 33.5138, 36.2765)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Syria.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Damascus, Syria
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem24" style="margin-top: 450px;"
+                            onclick="handleClick(this, 6.9271, 79.8612)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/SriLanka.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Colombo, Sri Lanka
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem25" style="margin-top: 450px;"
+                            onclick="handleClick(this, 51.1605, 71.4704)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Kazakhstan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Nur-Sultan, Kazakhstan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem26" style="margin-top: 450px;"
+                            onclick="handleClick(this, 11.5564, 104.9282)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Cambodia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Phnom Penh, Cambodia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem27" style="margin-top: 450px;"
+                            onclick="handleClick(this, 31.9632, 35.9304)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Jordan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Amman, Jordan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem28" style="margin-top: 450px;"
+                            onclick="handleClick(this, 40.4093, 49.8671)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Azerbaijan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Baku, Azerbaijan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem29" style="margin-top: 450px;"
+                            onclick="handleClick(this, 38.5600, 68.7738)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Tajikistan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Dushanbe, Tajikistan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem30" style="margin-top: 450px;"
+                            onclick="handleClick(this, 24.4539, 54.3773)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/UnitedArabEmirates.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Abu Dhabi, UAE
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem31" style="margin-top: 450px;"
+                            onclick="handleClick(this, 31.7683, 35.2137)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Israel.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Jerusalem, Israel
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem32" style="margin-top: 450px;"
+                            onclick="handleClick(this, 17.9757, 102.6331)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Laos.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Vientiane, Laos
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem33" style="margin-top: 450px;"
+                            onclick="handleClick(this, 42.8746, 74.5698)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Kyrgyzstan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Bishkek, Kyrgyzstan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem34" style="margin-top: 450px;"
+                            onclick="handleClick(this, 37.9601, 58.3261)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Turkmenistan.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Ashgabat, Turkmenistan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem35" style="margin-top: 450px;"
+                            onclick="handleClick(this, 1.3521, 103.8198)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Singapore.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Singapore, Singapore
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem36" style="margin-top: 450px;"
+                            onclick="handleClick(this, 31.9038, 35.2034)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/StateofPalestine.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Ramallah, State of Palestine
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem37" style="margin-top: 450px;"
+                            onclick="handleClick(this, 33.8886, 35.4955)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Lebanon.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Beirut, Lebanon
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem38" style="margin-top: 450px;"
+                            onclick="handleClick(this, 23.6100, 58.5909)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Oman.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Muscat, Oman
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem39" style="margin-top: 450px;"
+                            onclick="handleClick(this, 29.3759, 47.9774)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Kuwait.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Kuwait City, Kuwait
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem40" style="margin-top: 450px;"
+                            onclick="handleClick(this, 41.7151, 44.8271)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Georgia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Tbilisi, Georgia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem41" style="margin-top: 450px;"
+                            onclick="handleClick(this, 47.9204, 106.9179)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Mongolia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Ulaanbaatar, Mongolia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem42" style="margin-top: 450px;"
+                            onclick="handleClick(this, 40.1872, 44.5152)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Armenia.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Yerevan, Armenia
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem43" style="margin-top: 450px;"
+                            onclick="handleClick(this, 25.2769, 51.5200)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Qatar.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Doha, Qatar
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem44" style="margin-top: 450px;"
+                            onclick="handleClick(this, 26.2285, 50.5860)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Bahrain.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Manama, Bahrain
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem45" style="margin-top: 450px;"
+                            onclick="handleClick(this, 8.5568, 125.5603)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Timor-Leste.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Dili, Timor-Leste
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem46" style="margin-top: 450px;"
+                            onclick="handleClick(this, 35.1856, 33.3823)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Cyprus.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Nicosia, Cyprus
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem47" style="margin-top: 450px;"
+                            onclick="handleClick(this, 27.4728, 89.6390)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Bhutan.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Thimphu, Bhutan
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem48" style="margin-top: 450px;"
+                            onclick="handleClick(this, 4.1755, 73.5093)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Maldives.png" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Malé, Maldives
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item item-start" id="clickedItem49" style="margin-top: 450px;"
+                            onclick="handleClick(this, 4.9031, 114.9408)">
+                            <a class="item-a">
+                                <div class="item-0">
+                                    <div class="flag">
+                                        <img src="./assets/images/Brunei.jpg" alt="UK">
+                                    </div>
+                                    <h3 class="t-size-l t-clearface t-align-c">
+                                        Bandar Seri Begawan, Brunei
+                                    </h3>
+                                    <div class="mapProjectStrip_projectCardText__XGs_R t-size-xs t-align-c">
+                                        Cultivating Wellness on Campus
+                                    </div>
+                                </div>
+                                <div class="CardImage">
+                                    <img src="./assets/images/happy.webp" data-sizes="auto"
+                                        data-aspectratio="0.8225572629747753" alt="" class="lazyload" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- map end -->
+
+    <!-- grid start -->
+    <div class="grid">
+        <div class="grids">
+            <div class="grids-0">
+
+                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                    <a class="item-a-grid"
+                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
+                        <div class="item-f"><img
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                alt="India"></div>
+                        <div class="item-main">
+                            <div class="item-main-0 t-size-xs t-uc"
+                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
+                            </div>
+                            <img class="image-grid"
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
+                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                        </div>
+                    </a>
+                    <div class="after-image">
+                        <div>
+                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                    <a class="item-a-grid"
+                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
+                        <div class="item-f"><img
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                alt="India"></div>
+                        <div class="item-main">
+                            <div class="item-main-0 t-size-xs t-uc"
+                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
+                            </div>
+                            <img class="image-grid"
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
+                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                        </div>
+                    </a>
+                    <div class="after-image">
+                        <div>
+                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                    <a class="item-a-grid"
+                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
+                        <div class="item-f"><img
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                alt="India"></div>
+                        <div class="item-main">
+                            <div class="item-main-0 t-size-xs t-uc"
+                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
+                            </div>
+                            <img class="image-grid"
+                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
+                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                        </div>
+                    </a>
+                    <div class="after-image">
+                        <div>
+                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- grid end -->
+
+
+
+
+    <!-- commented old code -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 my-div text-center" id="div-overlay-pk" onclick="funcIsl()">
+                <button id="btn-pic-pk" onclick="applyStylesMinus('btn-pic-pk','div-pad-pk', 'div-overlay-pk'); event.stopPropagation(); "><svg
+                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                        <title>Reset</title>
+                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
+                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
+                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
+                        </g>
+                    </svg></button>
+                <div class="" id="div-pad-pk" style="padding-top: 20px;">
+                    <img src="./assets/images/pak.png" alt="South Africa " width="10%">
+                </div>
+
+                <h3 class="">Pakistan</h3>
+                <div class="">Cultivating a green heaven for community
+                    wellness and education.<br>
+                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa " width="70%">
+
+                </div>
+            </div>
+
+            <div class="col-md-3 my-div text-center" id="div-overlay-uk" onclick="funcUk()" style="left: 480px !important;">
+                <button id="btn-pic-uk" onclick="applyStylesMinus('btn-pic-uk','div-pad-uk', 'div-overlay-uk'); event.stopPropagation();"><svg
+                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                        <title>Reset</title>
+                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
+                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
+                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
+                        </g>
+                    </svg></button>
+                <div class="" id="div-pad-uk" style="padding-top: 20px;">
+                    <img src="./assets/images/UK.jpg" alt="South Africa " width="10%">
+                </div>
+
+                <h3 class="">UK</h3>
+                <div class="">Cultivating a green heaven for community
+                    wellness and education.<br>
+                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa "
+                        style="object-fit: cover;" width="70%">
+
+                </div>
+            </div>
+
+            <div class="col-md-3 my-div text-center" id="div-overlay-usa" onclick="funcUsa()" style="left: 915px !important;">
+                <button id="btn-pic-usa" onclick="applyStylesMinus('btn-pic-usa','div-pad-usa', 'div-overlay-usa'); event.stopPropagation(); "><svg
+                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                        <title>Reset</title>
+                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
+                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
+                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
+                        </g>
+                    </svg></button>
+                <div class="" id="div-pad-usa" style="padding-top: 20px;">
+                    <img src="./assets/images/USA.jpg" alt="South Africa " width="10%">
+                </div>
+
+                <h3 class="">USA</h3>
+                <div class="">Cultivating a green heaven for community
+                    wellness and education.<br>
+                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa "
+                        style="object-fit: cover;" width="70%">
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="container-fluid bg-light"
+        style="position: relative !important; z-index: 2000;">
+        <div class="row">
+            <div class="md-6">
+                <div class="">
+                    <img src="./assets/images/bg.png" alt="South Africa " width="100%">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- commented old code -->
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer-wrapper">
+            <section class="footer-top">
+                <a href="#" title="logo">
+                    <img src="assets/social icons/logo.jpg" class="logo" />
+                </a>
+                <span class="social-links">
+                    <a href="#" title="facebook">
+                        <img src="assets/social icons/facebook.svg" alt="facebook" />
+                    </a>
+                    <a href="#" title="instagram">
+                        <img src="assets/social icons/instagram.svg" alt="instagram" />
+                    </a>
+                    <a href="#" title="twitter">
+                        <img src="assets/social icons/twitter.svg" alt="twitter" />
+                    </a>
+                    <a href="" title="linkedin">
+                        <img src="assets/social icons/linkedin.svg" alt="linkedin" />
+                    </a>
+                </span>
+            </section>
+            <section class="footer-columns">
+                <section>
+                    <ul>
+                        <h3>Quick Links</h3>
+                        <li>
+                            <a href="#">Donat USA</a>
+                        </li>
+                        <li>
+                            <a href="#">2022 impact report</a>
+                        </li>
+                        <li>
+                            <a href="#">Gift</a>
+                        </li>
+                        <li>
+                            <a href="#">Team</a>
+                        </li>
+                        <li>
+                            <a href="#">partners</a>
+                        </li>
+                        <li>
+                            <a href="#">Awards</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Term of Use</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <h3>Social Links</h3>
+                        <li>
+                            <a href="#">facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">instagram</a>
+                        </li>
+                        <li>
+                            <a href="#">twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">linkedin</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <h3>Collaborators</h3>
+                        <li>
+                            <a href="#">Afforestt Institute</a>
+                        </li>
+                        <li>
+                            <a href="#">Arbor Day Foundation</a>
+                        </li>
+                        <li>
+                            <a href="#">Global Rewilding Allience</a>
+                        </li>
+                        <li>
+                            <a href="#">Restore</a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="footer-bottom">
+                <small>© My company Ltd. <span id="year"></span>,All right reserved</small>
+                <span class="footer-bottom-links">
+                    <a href="#">Terms and Services</a>
+                    <a href="#">Privacy Policy</a>
+                </span>
+            </section>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="./assets/js/jasonData.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+    <script src="./assets/js/slider-card.js"></script>
+    <script>
+        // function scrollSmoothlyToRight(slider) {
+        //     const scrollStep = 10;
+        //     const scrollInterval = 10;
+
+        //     let scrollAmount = 0;
+
+        //     const scrollIntervalID = setInterval(() => {
+        //         slider.scrollLeft += scrollStep;
+        //         scrollAmount += scrollStep;
+
+        //         if (scrollAmount >= slider.offsetWidth) {
+        //             clearInterval(scrollIntervalID);
+        //         }
+        //     }, scrollInterval);
+        // }
+
+        function changeMarginTop(clickedItem) {
+            const totalItems = 49;
+
+            const clickedItemId = clickedItem.id;
+            const clickedItemIndex = parseInt(clickedItemId.replace('clickedItem', ''), 10);
+            // alert(clickedItemIndex);
+
+            for (let i = 1; i <= totalItems; i++) {
+                const item = document.getElementById(`clickedItem${i}`);
+                if (i === clickedItemIndex) {
+                    if (item.style.marginTop === '450px') {
+                        item.style.marginTop = '192px';
+                    } else {
+                        item.style.marginTop = '450px';
+                    }
+                } else {
+                    item.style.marginTop = '450px';
+                }
+
+                item.classList.toggle('item-move');
+            }
+
+        }
+
+
+        function handleClick(clickedItem, Lat, Long) {
+            allContray(Lat, Long)
+            changeMarginTop(clickedItem);
+        }
+
+
+        // const clickableItem1 = document.getElementById("clickedItem1");
+        // const clickableItem2 = document.getElementById("clickedItem2");
+        // const clickableItem3 = document.getElementById("clickedItem3");
+        // const clickableItem4 = document.getElementById("clickedItem4");
+        // const clickableItem5 = document.getElementById("clickedItem5");
+        // const clickableItem6 = document.getElementById("clickedItem6");
+        // const clickableItem7 = document.getElementById("clickedItem7");
+        // const clickableItem8 = document.getElementById("clickedItem8");
+        // const clickableItem9 = document.getElementById("clickedItem9");
+        // const clickableItem10 = document.getElementById("clickedItem10");
+
+        // clickableItem2.addEventListener("click", () => {
+        //     clickableItem2.classList.toggle("clicked");
+        //     clickableItem1.style.transform = "translate3d(2735px, 0px, 0px)";
+        //     clickableItem1.style.transitionDuration = "0ms";
+        //     clickableItem2.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem2.style.transitionDuration = "0ms";
+        //     clickableItem3.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem3.style.transitionDuration = "0ms";
+        //     clickableItem4.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem4.style.transitionDuration = "0ms";
+        //     clickableItem5.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem5.style.transitionDuration = "0ms";
+        //     clickableItem6.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem6.style.transitionDuration = "0ms";
+        //     clickableItem7.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem7.style.transitionDuration = "0ms";
+        //     clickableItem8.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem8.style.transitionDuration = "0ms";
+        //     clickableItem9.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem9.style.transitionDuration = "0ms";
+        //     clickableItem10.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem10.style.transitionDuration = "0ms";
+        // });
+        // clickableItem3.addEventListener("click", () => {
+        //     clickableItem3.classList.toggle("clicked");
+        //     clickableItem1.style.transform = "translate3d(2430px, 0px, 0px)";
+        //     clickableItem1.style.transitionDuration = "0ms";
+        //     clickableItem2.style.transform = "translate3d(2430px, 0px, 0px)";
+        //     clickableItem2.style.transitionDuration = "0ms";
+        //     clickableItem3.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem3.style.transitionDuration = "0ms";
+        //     clickableItem4.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem4.style.transitionDuration = "0ms";
+        //     clickableItem5.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem5.style.transitionDuration = "0ms";
+        //     clickableItem6.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem6.style.transitionDuration = "0ms";
+        //     clickableItem7.style.transform = "translate3d(-305px, 0px, 0px)";
+        //     clickableItem7.style.transitionDuration = "0ms";
+        //     clickableItem8.style.transform = "translate3d(-915px, 0px, 0px)";
+        //     clickableItem8.style.transitionDuration = "0ms";
+        //     clickableItem9.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem9.style.transitionDuration = "0ms";
+        //     clickableItem10.style.transform = "translate3d(-610px, 0px, 0px)";
+        //     clickableItem10.style.transitionDuration = "0ms";
+        // });
+    </script>
+</body>
+
+</html>

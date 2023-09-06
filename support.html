@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container-fluid" style="background: #f9f9f1;">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="support-div">
+                    <div class="t-align-c">
+                        <h2 class="t-heading-lg t-clearface">Invest in Nature</h2>
+                        <div class="splash-text t-size-m">
+                            <p>SUGi makes it simple and fun to be a Biodiversity Builder.</p>
+                            <p>We deliver big returns for you and your world with even a small investment.</p>
+                        </div>
+                        <div class="button-options t-size-s"><a class="button button--pink button-sep"
+                                href="">Support</a><a class="button button--green button-sep" href="">Gift for a
+                                friend</a>
+                                
+                            <!-- <form action="/api/checkout/checkout-sessions" method="POST" class="donate"><button
+                                    type="submit" role="link" class="button button--outline button-sep"
+                                    style="background: none;">🇺🇸&nbsp;Donate</button></form> -->
+                            <script async src="https://js.stripe.com/v3/buy-button.js">
+                            </script>
+
+                            
+                            <stripe-buy-button  buy-button-id="buy_btn_1NnLPwL31SFSh9Qeuuf93uJY"
+                                publishable-key="pk_test_51Nn0caL31SFSh9QegnQ9LTd3lzBNS2wyftlCsdx7fkBUIJErkRbASoM8qDGeqs2M8VMQZzQoHJPtHoAHI8NFt79c00Z147qtVU">
+                            </stripe-buy-button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 img-contain">
+                <img src="./assets/images/support.webp" class="img-fluid img-cover" width="100%" alt="not load image">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
