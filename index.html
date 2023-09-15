@@ -21,12 +21,15 @@
             top: 0;
             width: 100%;
         }
+
+        * {
+            outline: 1px solid red;
+        }
     </style>
 
 </head>
 
-<body>
-
+<body style="overflow-x: hidden;">
     <!-- navbar start -->
     <nav class="sticky navbar-light bg-light"
         style="padding-top: 20px; background-color: white !important; z-index: 2000;height: 90px;">
@@ -39,7 +42,7 @@
        ">
                 MAP
             </button>
-            <button class="btn my-btn my-sm-0" style="margin-left: 0px">
+            <button class="btn my-btn my-sm-0" style="margin-left: 0px" onclick="location.href='#projects';">
                 PROJECTS
             </button>
             <button class="btn my-btn my-sm-0" style="margin-left: 0px">
@@ -1056,178 +1059,131 @@
     <!-- map end -->
 
     <!-- grid start -->
-    <div class="grid">
+    <div class="grid" id="projects">
         <div class="grids">
             <div class="grids-0">
-
-                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
-                    <a class="item-a-grid"
-                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
-                        <div class="item-f"><img
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
-                                alt="India"></div>
-                        <div class="item-main">
-                            <div class="item-main-0 t-size-xs t-uc"
-                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-12">
+                            <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                                <!--for border add it to a tag style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" -->
+                                <a class="item-a-grid" href="">
+                                    <div class="item-f"><img
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                            alt="India"></div>
+                                    <div class="item-main">
+                                        <div class="item-main-0 t-size-xs t-uc"
+                                            style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self
+                                            Sustaining
+                                        </div>
+                                        <img class="image-grid"
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                            data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                            class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded"
+                                            sizes="376px"
+                                            srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                                    </div>
+                                </a>
+                                <div class="after-image">
+                                    <div>
+                                        <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                                    </div>
+                                </div>
                             </div>
-                            <img class="image-grid"
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
-                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
-                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
-                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
                         </div>
-                    </a>
-                    <div class="after-image">
-                        <div>
-                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                        <div class="col-md-4 col-sm-12 col-12">
+                            <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                                <a class="item-a-grid" href="">
+                                    <div class="item-f"><img
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                            alt="India"></div>
+                                    <div class="item-main">
+                                        <div class="item-main-0 t-size-xs t-uc"
+                                            style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self
+                                            Sustaining
+                                        </div>
+                                        <img class="image-grid"
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                            data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                            class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded"
+                                            sizes="376px"
+                                            srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                                    </div>
+                                </a>
+                                <div class="after-image">
+                                    <div>
+                                        <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-12">
+                            <div class="t-align-c item-grid item-grid-0 grid-item-prj">
+                                <a class="item-a-grid" href="">
+                                    <div class="item-f"><img
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
+                                            alt="India"></div>
+                                    <div class="item-main">
+                                        <div class="item-main-0 t-size-xs t-uc"
+                                            style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self
+                                            Sustaining
+                                        </div>
+                                        <img class="image-grid"
+                                            src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
+                                            data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
+                                            data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
+                                            class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded"
+                                            sizes="376px"
+                                            srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
+                                    </div>
+                                </a>
+                                <div class="after-image">
+                                    <div>
+                                        <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
-                    <a class="item-a-grid"
-                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
-                        <div class="item-f"><img
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
-                                alt="India"></div>
-                        <div class="item-main">
-                            <div class="item-main-0 t-size-xs t-uc"
-                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
-                            </div>
-                            <img class="image-grid"
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
-                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
-                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
-                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
-                        </div>
-                    </a>
-                    <div class="after-image">
-                        <div>
-                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="t-align-c item-grid item-grid-0 grid-item-prj">
-                    <a class="item-a-grid"
-                        style="border-color: rgb(151, 225, 48); border-width: 10px; border-style: solid;" href="">
-                        <div class="item-f"><img
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/b704a10f0fdcb8ec6b7a96ef936c1aa6a5388149-214x142.png?w=120&amp;q=75"
-                                alt="India"></div>
-                        <div class="item-main">
-                            <div class="item-main-0 t-size-xs t-uc"
-                                style="background-color: rgb(151, 225, 48);color: #192531;">Forest Self Sustaining
-                            </div>
-                            <img class="image-grid"
-                                src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-src="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format"
-                                data-srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w"
-                                data-sizes="auto" data-aspectratio="0.9609224855861627" alt=""
-                                class="impactGrid_image__ts6i3 lazyautosizes ls-is-cached lazyloaded" sizes="376px"
-                                srcset="https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=1500&amp;q=85&amp;auto=format 1500w,https://cdn.sanity.io/images/oyzyxja8/production/fa36ce47ef366af84cb31f7226b78c21e86d42f7-1500x1561.jpg?w=750&amp;q=85&amp;auto=format 750w">
-                        </div>
-                    </a>
-                    <div class="after-image">
-                        <div>
-                            <h2 class="image-title t-heading t-clearface"><a href="">Green Schools</a></h2>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
+
         </div>
     </div>
     <!-- grid end -->
 
 
-
-
-    <!-- commented old code -->
-    <!-- <div class="container-fluid">
+    <div class="container-fluid" style="padding-right: 0 !important;padding-left: 0 !important;">
         <div class="row">
-            <div class="col-md-3 my-div text-center" id="div-overlay-pk" onclick="funcIsl()">
-                <button id="btn-pic-pk" onclick="applyStylesMinus('btn-pic-pk','div-pad-pk', 'div-overlay-pk'); event.stopPropagation(); "><svg
-                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-                        <title>Reset</title>
-                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
-                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
-                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
-                        </g>
-                    </svg></button>
-                <div class="" id="div-pad-pk" style="padding-top: 20px;">
-                    <img src="./assets/images/pak.png" alt="South Africa " width="10%">
-                </div>
+            <div class="col-md-12">
+                <div style="position: relative;">
+                    <img src="./assets/images/newsletter.jpg" class="img-fluid" style="position: relative;">
+                    <div
+                        style="position: absolute;transform: translate(-52%,-54%);width: 56em;top: 50%;left: 50%;z-index: 2;">
+                        <img src="./assets/images/newsletter-overlay.png" id="newsletter-img" class="img-fluid">
+                        <!-- <div style="z-index: 3;text-align: center;transform: translate(0,-147%);">
+                            <h3 class="t-clearface" style="font-size: 3.375rem;">Banoit-fy your inbox</h3>
+                            <div class="" style="line-height: 1.28;
+                            font-size: 1.125rem;">
+                                <p>Sign up for biodiversity building updates!</p>
+                            </div>
+                            <form class="t-size-s"><input type="email" class="" placeholder="Email Address"
+                                    required=""><button type="submit" style="background-color: #f9f9f1;" class="button button--outline">Submit</button>
+                            </form>
+                        </div> -->
+                    </div>
 
-                <h3 class="">Pakistan</h3>
-                <div class="">Cultivating a green heaven for community
-                    wellness and education.<br>
-                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa " width="70%">
-
-                </div>
-            </div>
-
-            <div class="col-md-3 my-div text-center" id="div-overlay-uk" onclick="funcUk()" style="left: 480px !important;">
-                <button id="btn-pic-uk" onclick="applyStylesMinus('btn-pic-uk','div-pad-uk', 'div-overlay-uk'); event.stopPropagation();"><svg
-                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-                        <title>Reset</title>
-                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
-                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
-                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
-                        </g>
-                    </svg></button>
-                <div class="" id="div-pad-uk" style="padding-top: 20px;">
-                    <img src="./assets/images/UK.jpg" alt="South Africa " width="10%">
-                </div>
-
-                <h3 class="">UK</h3>
-                <div class="">Cultivating a green heaven for community
-                    wellness and education.<br>
-                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa "
-                        style="object-fit: cover;" width="70%">
-
-                </div>
-            </div>
-
-            <div class="col-md-3 my-div text-center" id="div-overlay-usa" onclick="funcUsa()" style="left: 915px !important;">
-                <button id="btn-pic-usa" onclick="applyStylesMinus('btn-pic-usa','div-pad-usa', 'div-overlay-usa'); event.stopPropagation(); "><svg
-                        width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-                        <title>Reset</title>
-                        <g stroke="#192531" stroke-width="2" fill="none" fill-rule="evenodd">
-                            <rect fill="#F9F9F1" x="1" y="1" width="24" height="24" rx="12"></rect>
-                            <path stroke-linecap="round" d="M9 9.04l8.52 8.45M9.02 17.54l8.49-8.48"></path>
-                        </g>
-                    </svg></button>
-                <div class="" id="div-pad-usa" style="padding-top: 20px;">
-                    <img src="./assets/images/USA.jpg" alt="South Africa " width="10%">
-                </div>
-
-                <h3 class="">USA</h3>
-                <div class="">Cultivating a green heaven for community
-                    wellness and education.<br>
-                    <img class="img-fluid" src="./assets/images/happy.webp" alt="South Africa "
-                        style="object-fit: cover;" width="70%">
                 </div>
             </div>
         </div>
+    </div>
+
     
-
-        <div class="container-fluid bg-light"
-        style="position: relative !important; z-index: 2000;">
-        <div class="row">
-            <div class="md-6">
-                <div class="">
-                    <img src="./assets/images/bg.png" alt="South Africa " width="100%">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- commented old code -->
-
     <!-- footer start -->
     <footer>
         <div class="footer-wrapper">
@@ -1341,22 +1297,7 @@
     <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
     <script src="./assets/js/slider-card.js"></script>
     <script>
-        // function scrollSmoothlyToRight(slider) {
-        //     const scrollStep = 10;
-        //     const scrollInterval = 10;
-
-        //     let scrollAmount = 0;
-
-        //     const scrollIntervalID = setInterval(() => {
-        //         slider.scrollLeft += scrollStep;
-        //         scrollAmount += scrollStep;
-
-        //         if (scrollAmount >= slider.offsetWidth) {
-        //             clearInterval(scrollIntervalID);
-        //         }
-        //     }, scrollInterval);
-        // }
-
+        
         function changeMarginTop(clickedItem) {
             const totalItems = 49;
 
@@ -1381,70 +1322,10 @@
 
         }
 
-
         function handleClick(clickedItem, Lat, Long) {
             allContray(Lat, Long)
             changeMarginTop(clickedItem);
         }
-
-
-        // const clickableItem1 = document.getElementById("clickedItem1");
-        // const clickableItem2 = document.getElementById("clickedItem2");
-        // const clickableItem3 = document.getElementById("clickedItem3");
-        // const clickableItem4 = document.getElementById("clickedItem4");
-        // const clickableItem5 = document.getElementById("clickedItem5");
-        // const clickableItem6 = document.getElementById("clickedItem6");
-        // const clickableItem7 = document.getElementById("clickedItem7");
-        // const clickableItem8 = document.getElementById("clickedItem8");
-        // const clickableItem9 = document.getElementById("clickedItem9");
-        // const clickableItem10 = document.getElementById("clickedItem10");
-
-        // clickableItem2.addEventListener("click", () => {
-        //     clickableItem2.classList.toggle("clicked");
-        //     clickableItem1.style.transform = "translate3d(2735px, 0px, 0px)";
-        //     clickableItem1.style.transitionDuration = "0ms";
-        //     clickableItem2.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem2.style.transitionDuration = "0ms";
-        //     clickableItem3.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem3.style.transitionDuration = "0ms";
-        //     clickableItem4.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem4.style.transitionDuration = "0ms";
-        //     clickableItem5.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem5.style.transitionDuration = "0ms";
-        //     clickableItem6.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem6.style.transitionDuration = "0ms";
-        //     clickableItem7.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem7.style.transitionDuration = "0ms";
-        //     clickableItem8.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem8.style.transitionDuration = "0ms";
-        //     clickableItem9.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem9.style.transitionDuration = "0ms";
-        //     clickableItem10.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem10.style.transitionDuration = "0ms";
-        // });
-        // clickableItem3.addEventListener("click", () => {
-        //     clickableItem3.classList.toggle("clicked");
-        //     clickableItem1.style.transform = "translate3d(2430px, 0px, 0px)";
-        //     clickableItem1.style.transitionDuration = "0ms";
-        //     clickableItem2.style.transform = "translate3d(2430px, 0px, 0px)";
-        //     clickableItem2.style.transitionDuration = "0ms";
-        //     clickableItem3.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem3.style.transitionDuration = "0ms";
-        //     clickableItem4.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem4.style.transitionDuration = "0ms";
-        //     clickableItem5.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem5.style.transitionDuration = "0ms";
-        //     clickableItem6.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem6.style.transitionDuration = "0ms";
-        //     clickableItem7.style.transform = "translate3d(-305px, 0px, 0px)";
-        //     clickableItem7.style.transitionDuration = "0ms";
-        //     clickableItem8.style.transform = "translate3d(-915px, 0px, 0px)";
-        //     clickableItem8.style.transitionDuration = "0ms";
-        //     clickableItem9.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem9.style.transitionDuration = "0ms";
-        //     clickableItem10.style.transform = "translate3d(-610px, 0px, 0px)";
-        //     clickableItem10.style.transitionDuration = "0ms";
-        // });
     </script>
 </body>
 
